@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import NewsArticle from "./NewsArticle";
 
-export class News extends Component {
+export default class News extends Component {
   articles = [];
-  // const cameraInfo = data.photos[0].camera;
   constructor() {
     super();
     this.state = {
@@ -19,7 +18,7 @@ export class News extends Component {
       "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=luhAN7hK9UfXrLQNcUYeD7WkMmbAs4HlaNWfKEoA"
     );
     let parsedData = await data.json();
-    console.log(parsedData.photos[0].rover);
+    //console.log(parsedData.photos);
     this.setState({ articles: parsedData.photos });
   }
 
@@ -48,5 +47,3 @@ export class News extends Component {
     );
   }
 }
-
-export default News;
