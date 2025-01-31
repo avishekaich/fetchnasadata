@@ -22,17 +22,32 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" to={"/"} tabIndex={1}>
+              <Link
+                className="nav-link"
+                to={"/"}
+                activeClassName="active"
+                tabIndex={1}
+              >
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={"/About"} tabindex={2}>
+              <Link
+                className="nav-link"
+                activeClassName="active"
+                to={"/About"}
+                tabindex={2}
+              >
                 {props.AboutLink}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={"/NewsPage"} tabindex={3}>
+              <Link
+                className="nav-link"
+                activeClassName="active"
+                to={"/NewsPage"}
+                tabindex={3}
+              >
                 {props.newsLink}
               </Link>
             </li>
