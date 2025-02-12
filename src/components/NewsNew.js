@@ -35,6 +35,7 @@ const NewsNew = () => {
 
         setPhotoData(formattedPhotos);
         //console.log(data.photos);
+        //alert(data.photos);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -51,7 +52,6 @@ const NewsNew = () => {
             photoData.map(
               ({
                 id,
-                sol,
                 img_src,
                 earth_date,
                 cameraName,
@@ -62,29 +62,33 @@ const NewsNew = () => {
                 status,
               }) => (
                 <div className="col-xl-3 col-lg-4 col-md-6 mb-4" key={id}>
-                  <img
-                    src={img_src}
-                    alt={`Mars Rover - ${cameraFullName}`}
-                    width="300"
-                  />
-                  <p>
-                    <strong>Earth Date:</strong> {earth_date}
-                  </p>
-                  <p>
-                    <strong>Camera:</strong> {cameraName} - {cameraFullName}
-                  </p>
-                  <p>
-                    <strong>Rover:</strong> {roverName} (Status: {status})
-                  </p>
-                  <p>
-                    <strong>Landing Date:</strong> {landing_date} |{" "}
-                    <strong>Launch Date:</strong> {launch_date}
-                  </p>
+                  <div className="card">
+                    <img
+                      className="img-fluid"
+                      src={img_src}
+                      alt={`Mars Rover - ${roverName}`}
+                    />
+                    <div className="card-body">
+                      <h6 className="card-title">
+                        <strong>Earth Date:</strong> {earth_date}
+                      </h6>
+                      <p className="card-text">
+                        <strong>Camera:</strong> {cameraName} - {cameraFullName}
+                      </p>
+                      <p className="card-text">
+                        <strong>Rover:</strong> {roverName} (Status: {status})
+                      </p>
+                      <p className="card-text">
+                        <strong>Landing Date:</strong> {landing_date} |{" "}
+                        <strong>Launch Date:</strong> {launch_date}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               )
             )
           ) : (
-            <p>Loading...</p>
+            <div className="text-center"><p>Loading... Please Wait</p></div>
           )}
         </div>
       </div>
