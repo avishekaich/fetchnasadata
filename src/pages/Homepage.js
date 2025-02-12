@@ -1,6 +1,7 @@
 import React from "react";
 // import Navbar from "../components/Navbar";
-import News from "../components/News";
+//import News from "../components/News";
+import NewsNew from "../components/NewsNew";
 
 export default function Homepage() {
   return (
@@ -10,7 +11,7 @@ export default function Homepage() {
           {/* <Navbar title={"Hello World"} AboutLink={"About Us"} newsLink={"News New"} /> */}
         </div>
         <div className="col-sm-12">
-          <News />
+          <NewsNew />
         </div>
       </div>
     </div>

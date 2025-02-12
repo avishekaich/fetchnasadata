@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NewsArticle from "./NewsArticle";
+import NewsArticleNew from "./NewsArticleNew";
 
 export default class News extends Component {
   articles = [];
@@ -33,7 +33,7 @@ export default class News extends Component {
                 className="col-xl-3 col-lg-4 col-md-6 mb-4"
                 // key={element}
               >
-                <NewsArticle
+                <NewsArticleNew
                   imageUrl={element.img_src}
                   earthdate={element.earth_date}
                   cameraFullName={element.camera.full_name}
