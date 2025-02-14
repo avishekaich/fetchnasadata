@@ -1,8 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
+const Navhero = () => {
+  let location = useLocation();
+  useEffect(() => {
+    //ga.send(["pageview", location.pathname]);
+    console.log(location.pathname);
+  }, [location]);
 
-export default function Navhero() {
   return (
     <>
       <div className="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
@@ -24,13 +29,28 @@ export default function Navhero() {
             </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
               <div className="navbar-nav mx-0 mx-lg-auto">
-                <Link to={"/"} className="nav-item nav-link active">
+                <Link
+                  to={"/"}
+                  className={`nav-item nav-link ${
+                    location.pathname === "/" ? true : ""
+                  } `}
+                >
                   Home
                 </Link>
-                <Link to={"/About"} className="nav-item nav-link">
+                <Link
+                  to={"/About"}
+                  className={`nav-item nav-link ${
+                    location.pathname === "/About" ? true : ""
+                  } `}
+                >
                   About
                 </Link>
-                <Link to={"/Homepage"} className="nav-item nav-link">
+                <Link
+                  to={"/Homepage"}
+                  className={`nav-item nav-link ${
+                    location.pathname === "/Homepage" ? true : ""
+                  } `}
+                >
                   Services
                 </Link>
                 <a href="blog.html" className="nav-item nav-link">
@@ -107,4 +127,5 @@ export default function Navhero() {
       </div>
     </>
   );
-}
+};
+export default Navhero;

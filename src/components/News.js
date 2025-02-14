@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import NewsArticleNew from "./NewsArticleNew";
+//import NewsArticleNew from "./NewsArticleNew";
+import NewsArticle from "./NewsArticle";
 
 export default class News extends Component {
   articles = [];
@@ -30,14 +31,19 @@ export default class News extends Component {
           {this.state.articles?.map((element) => {
             return (
               <div
-                className="col-xl-3 col-lg-4 col-md-6 mb-4"
-                // key={element}
-              >
-                <NewsArticleNew
+                className="col-xl-3 col-lg-4 col-md-6 mb-4">
+                {/* <NewsArticleNew
                   imageUrl={element.img_src}
                   earthdate={element.earth_date}
                   cameraFullName={element.camera.full_name}
                   cameraName={element.camera.name}
+                /> */}
+
+                <NewsArticle key={element.id}
+                  imageUrl={element.img_src}
+                  earthdate={element.earth_date}
+                  cameraFullName={element.cameraFullName}
+                  cameraName={element.full_name}
                 />
               </div>
             );

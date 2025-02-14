@@ -157,9 +157,9 @@ body {
 }
 
 .navbar-light .navbar-nav .nav-item:hover,
-.navbar-light .navbar-nav .nav-item.active,
+.navbar-light .navbar-nav .nav-item.true,
 .navbar-light .navbar-nav .nav-item:hover .nav-link,
-.navbar-light .navbar-nav .nav-item.active .nav-link {
+.navbar-light .navbar-nav .nav-item.true .nav-link {
   color: var(--bs-primary);
 }
 

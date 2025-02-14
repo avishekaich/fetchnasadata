@@ -12,6 +12,7 @@ export default function Homepage() {
         </div>
         <div className="col-sm-12">
           <NewsNew />
+          {/* <News /> */}
         </div>
       </div>
     </div>
