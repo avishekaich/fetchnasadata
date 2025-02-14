@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Homepage from "./pages/Homepage";
+import Notfound from "./pages/Notfound";
 
 export default class App extends Component {
   render() {
@@ -18,6 +19,7 @@ export default class App extends Component {
           <Route index element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Homepage" element={<Homepage />} />
+          <Route path="*" element={<Notfound />} />
         </Routes>
       </>
     );

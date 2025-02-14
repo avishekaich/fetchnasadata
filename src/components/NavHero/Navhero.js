@@ -32,7 +32,7 @@ const Navhero = () => {
                 <Link
                   to={"/"}
                   className={`nav-item nav-link ${
-                    location.pathname === "/" ? true : ""
+                    location.pathname === "/" ? "active" : ""
                   } `}
                 >
                   Home
@@ -40,7 +40,7 @@ const Navhero = () => {
                 <Link
                   to={"/About"}
                   className={`nav-item nav-link ${
-                    location.pathname === "/About" ? true : ""
+                    location.pathname === "/About" ? "active" : ""
                   } `}
                 >
                   About
@@ -48,7 +48,7 @@ const Navhero = () => {
                 <Link
                   to={"/Homepage"}
                   className={`nav-item nav-link ${
-                    location.pathname === "/Homepage" ? true : ""
+                    location.pathname === "/Homepage" ? "active" : ""
                   } `}
                 >
                   Services
