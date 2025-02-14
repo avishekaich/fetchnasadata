@@ -15,7 +15,8 @@ const Navhero = () => {
           <nav className="navbar navbar-expand-lg navbar-light">
             <a href="/" className="navbar-brand p-0">
               <h1 className="text-primary mb-0">
-                <i className="fab fa-slack me-2"></i> LifeSure
+                {/* <i className="fab fa-slack me-2"></i> LifeSure */}
+                <i className="fab fa-slack me-2"></i> TestFile
               </h1>
               {/* <img src="img/logo.png" alt="Logo"> */}
             </a>
