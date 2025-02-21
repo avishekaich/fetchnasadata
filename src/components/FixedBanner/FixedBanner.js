@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 const banners = {
   "/": "https://via.placeholder.com/1200x300?text=Home+Banner",
-  "/about": "https://via.placeholder.com/1200x300?text=About+Us+Banner",
+  "/About": "https://www.shutterstock.com/shutterstock/photos/2473217271/display_1500/stock-photo-beautiful-mountain-landscapes-in-torres-del-paine-national-park-chile-world-famous-hiking-region-2473217271.jpg/1200x300?text=About+Us+Banner",
   "/services": "https://via.placeholder.com/1200x300?text=Services+Banner",
   "/contact": "https://via.placeholder.com/1200x300?text=Contact+Us+Banner",
 };
