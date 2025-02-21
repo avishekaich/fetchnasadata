@@ -11,7 +11,7 @@ const Feature = () => {
         >
           <h4 className="text-primary">Our Features</h4>
           <h1 className="display-4 mb-4">
-            Insurance Provide you a Better Future
+            Letraset sheets containing Lorem Ipsum
           </h1>
           <p className="mb-0">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur

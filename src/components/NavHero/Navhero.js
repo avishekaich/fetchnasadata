@@ -5,7 +5,7 @@ const Navhero = () => {
   let location = useLocation();
   useEffect(() => {
     //ga.send(["pageview", location.pathname]);
-    console.log(location.pathname);
+    //console.log(location.pathname);
   }, [location]);
 
   return (
@@ -34,7 +34,7 @@ const Navhero = () => {
                   to={"/"}
                   className={`nav-item nav-link ${
                     location.pathname === "/" ? "active" : ""
-                  } `}
+                  }`}
                 >
                   Home
                 </Link>
@@ -42,7 +42,7 @@ const Navhero = () => {
                   to={"/About"}
                   className={`nav-item nav-link ${
                     location.pathname === "/About" ? "active" : ""
-                  } `}
+                  }`}
                 >
                   About
                 </Link>
@@ -50,7 +50,7 @@ const Navhero = () => {
                   to={"/Homepage"}
                   className={`nav-item nav-link ${
                     location.pathname === "/Homepage" ? "active" : ""
-                  } `}
+                  }`}
                 >
                   Services
                 </Link>
@@ -79,9 +79,11 @@ const Navhero = () => {
                     </a>
                   </div>
                 </div>
-                <a href="contact.html" className="nav-item nav-link">
+                <Link to={"/Contact"} className={`nav-item nav-link ${
+                    location.pathname === "/Contact" ? "active" : ""
+                  }`}>
                   Contact
-                </a>
+                </Link>
                 <div className="nav-btn px-3">
                   <button
                     className="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0"
@@ -98,29 +100,6 @@ const Navhero = () => {
                     Get a Quote
                   </a>
                 </div>
-              </div>
-            </div>
-            <div className="d-none d-xl-flex flex-shrink-0 ps-4">
-              <a
-                href="/"
-                className="btn btn-light btn-lg-square rounded-circle position-relative wow tada"
-                data-wow-delay=".9s"
-              >
-                <i className="fa fa-phone-alt fa-2x"></i>
-                <div
-                  className="position-absolute"
-                  style={{ top: "7px", right: "12px" }}
-                >
-                  <span>
-                    <i className="fa fa-comment-dots text-secondary"></i>
-                  </span>
-                </div>
-              </a>
-              <div className="d-flex flex-column ms-3">
-                <span>Call to Our Experts</span>
-                <a href="tel:+ 0123 456 7890">
-                  <span className="text-dark">Free: + 0123 456 7890</span>
-                </a>
               </div>
             </div>
           </nav>
