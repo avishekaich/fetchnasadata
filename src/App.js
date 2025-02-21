@@ -9,6 +9,7 @@ import Homepage from "./pages/Homepage";
 import Contact from "./pages/Contact";
 import Notfound from "./pages/Notfound";
 import Footer from "./components/Footer/Footer";
+import FixedBanner from "./components/FixedBanner/FixedBanner";
 
 export default class App extends Component {
   render() {
@@ -17,6 +18,7 @@ export default class App extends Component {
         {/* <Loader /> */}
         <Topbar />
         <Navhero />
+        <FixedBanner />
         <Routes>
           <Route index element={<Home />} />
           <Route path="/About" element={<About />} />
@@ -24,7 +26,7 @@ export default class App extends Component {
           <Route path="/Contact" element={<Contact />} />
           <Route path="*" element={<Notfound />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </>
     );
   }
