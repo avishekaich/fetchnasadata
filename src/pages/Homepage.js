@@ -1,7 +1,8 @@
 import React from "react";
+import DataInTable from "../components/DataInTable";
 // import Navbar from "../components/Navbar";
 //import News from "../components/News";
-import NewsNew from "../components/NewsNew";
+//import NewsNew from "../components/NewsNew";
 
 export default function Homepage() {
   return (
@@ -11,7 +12,8 @@ export default function Homepage() {
           {/* <Navbar title={"Hello World"} AboutLink={"About Us"} newsLink={"News New"} /> */}
         </div>
         <div className="col-sm-12">
-          <NewsNew />
+          <DataInTable/>
+          {/* <NewsNew /> */}
           {/* <News /> */}
         </div>
       </div>
