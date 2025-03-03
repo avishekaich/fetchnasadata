@@ -9,6 +9,7 @@ const DataInTable = () => {
       try {
         const response = await fetch(
           "https://datausa.io/api/data?drilldowns=Nation&measures=Population"
+          // http://14.99.211.60:9009/api/APISFA/GetEmployeeMenu/57
         );
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -36,7 +37,7 @@ const DataInTable = () => {
               {/* style={{border: "none"}} */}
               <thead>
                 <tr>
-                  {/* <th className="border border-gray-400 px-4 py-2">ID</th> */}
+                  <th>ID</th>
                   <th>Nation</th>
                   <th>Year</th>
                   <th>Population</th>
@@ -45,9 +46,7 @@ const DataInTable = () => {
               <tbody>
                 {apidata.map((dataTable) => (
                   <tr key={dataTable.id}>
-                    {/* <td className="border border-gray-400 px-4 py-2">
-                    {data.id}
-                  </td> */}
+                    <td>{dataTable.id}</td>
                     <td>{dataTable.Nation}</td>
                     <td>{dataTable.Year}</td>
                     <td>{dataTable.Population}</td>
