@@ -12,7 +12,7 @@ export default function Homepage() {
           {/* <Navbar title={"Hello World"} AboutLink={"About Us"} newsLink={"News New"} /> */}
         </div>
         <div className="col-sm-12">
-          <DataInTable/>
+          <DataInTable />
           {/* <NewsNew /> */}
           {/* <News /> */}
         </div>

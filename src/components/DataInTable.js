@@ -14,7 +14,8 @@ const DataInTable = () => {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const result = await response.json();
-        setData(result);
+        setData(result.data);
+        console.log(result.data);
       } catch (error) {
         console.error("Error fetching data:", error);
         setError(error.message);
@@ -25,41 +26,38 @@ const DataInTable = () => {
 
   return (
     <>
-      <div className="container mx-auto mt-5">
-        <h2 className="text-2xl font-bold mb-4">User Data</h2>
-        {error ? (
-          <p className="text-red-500">Failed to fetch data: {error}</p>
-        ) : (
-          <table className="table-auto border-collapse border border-gray-400 w-full">
-            <thead>
-              <tr className="bg-gray-200">
-                {/* <th className="border border-gray-400 px-4 py-2">ID</th> */}
-                <th className="border border-gray-400 px-4 py-2">Name</th>
-                <th className="border border-gray-400 px-4 py-2">Email</th>
-                <th className="border border-gray-400 px-4 py-2">Phone</th>
-              </tr>
-            </thead>
-            <tbody>
-              {apidata.map((data) => (
-                <tr key={data.id} className="text-center">
-                  {/* <td className="border border-gray-400 px-4 py-2">
+      <h5 className="my-4">User Data</h5>
+      {error ? (
+        <p className="text-red-500">Failed to fetch data: {error}</p>
+      ) : (
+        <div className="card">
+          <div className="card-body">
+            <table className="table table-bordered">
+              {/* style={{border: "none"}} */}
+              <thead>
+                <tr>
+                  {/* <th className="border border-gray-400 px-4 py-2">ID</th> */}
+                  <th>Nation</th>
+                  <th>Year</th>
+                  <th>Population</th>
+                </tr>
+              </thead>
+              <tbody>
+                {apidata.map((dataTable) => (
+                  <tr key={dataTable.id}>
+                    {/* <td className="border border-gray-400 px-4 py-2">
                     {data.id}
                   </td> */}
-                  <td className="border border-gray-400 px-4 py-2">
-                    {data.Nation}
-                  </td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    {data.Year}
-                  </td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    {data.Population}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
-      </div>
+                    <td>{dataTable.Nation}</td>
+                    <td>{dataTable.Year}</td>
+                    <td>{dataTable.Population}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
     </>
   );
 };

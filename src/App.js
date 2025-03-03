@@ -9,7 +9,7 @@ import Homepage from "./pages/Homepage";
 import Contact from "./pages/Contact";
 import Notfound from "./pages/Notfound";
 import Footer from "./components/Footer/Footer";
-import FixedBanner from "./components/FixedBanner/FixedBanner";
+//import FixedBanner from "./components/FixedBanner/FixedBanner";
 
 export default class App extends Component {
   render() {
@@ -18,7 +18,7 @@ export default class App extends Component {
         {/* <Loader /> */}
         <Topbar />
         <Navhero />
-        <FixedBanner />
+        {/* <FixedBanner /> */}
         <Routes>
           <Route index element={<Home />} />
           <Route path="/About" element={<About />} />
