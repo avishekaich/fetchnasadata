@@ -1,10 +1,9 @@
 import React from 'react'
+import MenuAPI from '../components/MenuAPI';
 
 const Contact = () => {
   return (
-    <div>
-      This is contact.
-    </div>
+    <MenuAPI/>
   )
 }
 
