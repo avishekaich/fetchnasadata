@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const MenuAPI = () => {
+const ContactMenu = () => {
   const [EmployeeMenuDetailList, setData] = useState([]);
   const [error, setError] = useState(null);
 
@@ -8,16 +8,17 @@ const MenuAPI = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://14.99.211.60:9009/api/APISFA/GetEmployeeMenu/57", {method:"get", mode:"no-cors"}
+          "http://14.99.211.60:9009/api/APISFA/GetEmployeeMenu/57"
         );
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const result = await response.json();
         setData(result.EmployeeMenuDetailList);
+        //console.log();
       } catch (error) {
         setError(error.message);
-        console.log(error);
+        //console.log(error);
       }
     };
     fetchData();
@@ -26,10 +27,10 @@ const MenuAPI = () => {
   const renderMenu = (items) => {
     return (
       <ul>
-        {items.map(({ AppMenuName, AppMenuIcon, link, submenu }) => (
+        {items.map(({ AppMenuName, AppMenuIcon, link, SubMenuList }) => (
           <li key={AppMenuName}>
             <a href={link}>{AppMenuIcon}</a>
-            {submenu && submenu.length > 0 && renderMenu(submenu)}
+            {SubMenuList && SubMenuList.length > 0 && renderMenu(SubMenuList)}
           </li>
         ))}
       </ul>
@@ -50,4 +51,4 @@ const MenuAPI = () => {
   );
 };
 
-export default MenuAPI;
+export default ContactMenu;

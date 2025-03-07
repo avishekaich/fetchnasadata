@@ -1,10 +1,13 @@
-import React from 'react'
-import MenuAPI from '../components/MenuAPI';
+import React from "react";
+import ContactMenu from "../components/ContactMenu";
 
 const Contact = () => {
   return (
-    <MenuAPI/>
-  )
-}
+    <>
+      <div className="d-none">This is a div.</div>
+      <ContactMenu />
+    </>
+  );
+};
 
-export default Contact
+export default Contact;

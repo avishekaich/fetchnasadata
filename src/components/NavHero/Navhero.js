@@ -84,7 +84,7 @@ const Navhero = () => {
                   }`}>
                   Contact
                 </Link>
-                <div className="nav-btn px-3">
+                <div className="nav-btn px-3 d-none">
                   <button
                     className="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0"
                     data-bs-toggle="modal"
