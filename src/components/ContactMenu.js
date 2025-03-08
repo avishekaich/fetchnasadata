@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const ContactMenu = () => {
-  const [EmployeeMenuDetailList, setData] = useState([]);
+  const [apidata, setData] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const ContactMenu = () => {
   const renderMenu = (items) => {
     return (
       <ul>
-        {items.map(({ AppMenuName, AppMenuIcon, link, SubMenuList }) => (
+        {apidata.map(({ AppMenuName, AppMenuIcon, link, SubMenuList }) => (
           <li key={AppMenuName}>
             <a href={link}>{AppMenuIcon}</a>
             {SubMenuList && SubMenuList.length > 0 && renderMenu(SubMenuList)}
@@ -39,12 +39,10 @@ const ContactMenu = () => {
 
   return (
     <>
-    {error && <p style={{ color: "red" }}>Error: {error}</p>}
+      {error && <p style={{ color: "red" }}>Error: {error}</p>}
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <div className="collapse navbar-collapse">
-            {renderMenu(EmployeeMenuDetailList)}
-          </div>
+          <div className="collapse navbar-collapse">{renderMenu(apidata)}</div>
         </div>
       </nav>
     </>
